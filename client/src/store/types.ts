@@ -10,6 +10,16 @@ export interface User {
   avatarUrl?: string;
 }
 
+ // What you send to backend when creating a user
+export interface CreateUserInput {
+  name: string;
+  email: string;
+  password: string;
+  role: 'admin' | 'worker';
+  jobTitle?: string;
+  iconName?: string;
+}
+ 
 export interface Comment {
   id: string;
   content: string;
